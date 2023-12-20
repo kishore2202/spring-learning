@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+        
+    <bean id="abc" class="com.javaTpoint.collection.constructorwithdependentobject.Question">
+    <constructor-arg value="1" type="int"></constructor-arg>
+    <constructor-arg value="What is java"></constructor-arg>
+    <constructor-arg>
+    <list>
+    <ref bean="ans1"/>
+    </list>
+    </constructor-arg>
+    </bean>        
+    
+    <bean id="ans1" class="com.javaTpoint.collection.constructorwithdependentobject.Answer">
+    <constructor-arg value="1" type="int"></constructor-arg>
+    <constructor-arg value="java is a high level lang."></constructor-arg>
+    <constructor-arg value="raju"></constructor-arg>
+    </bean>
+</beans>  
