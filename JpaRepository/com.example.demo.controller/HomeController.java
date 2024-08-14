@@ -1,3 +1,4 @@
+//using postman we can add, fetch the data
 package com.example.demo.controller;
 
 import java.util.List;
